@@ -1,4 +1,8 @@
 @import url("normalize.css");
 body {
   background-color: lightblue;
+}
+
+.planner-content {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
