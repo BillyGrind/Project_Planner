@@ -34,3 +34,11 @@ export function filter() {
     });
   });
 }
+const btnTime = document.getElementsByClassName("filter-date");
+const btnName = document.getElementsByClassName("filter-name");
+
+export function orderByName() {
+  const names = document.getElementsByClassName("content-name");
+
+  names.sort();
+}
