@@ -4,14 +4,23 @@ body {
 
   .planner-main-title {
     text-align: center;
+    padding: 50px 0px 30px 0px;
+    font-size: 26px;
   }
   .planner-filter {
     width: 50%;
     margin: auto;
     display: flex;
     flex-direction: row;
-    &-order {
-      padding-left: 50px;
+    justify-content: space-between;
+    button {
+      width: 50px;
+    }
+    .planner-filter-order {
+      button {
+        width: 150px;
+        font-size: 17px;
+      }
     }
   }
 }
