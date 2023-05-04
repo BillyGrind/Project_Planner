@@ -1,4 +1,4 @@
-import { getItemAndStore } from "./getItemAndStore.js";
+import { setItem } from "./getItemAndStore.js";
 import { taskArray } from "./const.js";
 import { createContent } from "./content.js";
 export function createAddContainer() {
@@ -34,7 +34,7 @@ export function createAddContainer() {
       date: inputDateValue,
     };
     taskArray.push(newTask);
-    console.log(taskArray);
+    setItem(taskArray);
     createContent();
   });
 }
