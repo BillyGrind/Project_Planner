@@ -1,3 +1,6 @@
+import { getItemAndStore } from "./getItemAndStore.js";
+import { taskArray } from "./const.js";
+import { createContent } from "./content.js";
 export function createAddContainer() {
   //Select planner container
   let plannerAddContainer = document.querySelector(".planner-add");
@@ -18,17 +21,20 @@ export function createAddContainer() {
 </form>
      `;
   plannerAddContainer.innerHTML += content;
-  let buttonAdd = document.getElementById("submit-button")[0];
-  let inputName = document.getElementById("name")[0];
   let form = document.querySelector("form");
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    let inputNameValue = inputName.value;
-    array.push(inputValue);
-    localStorage.setItem("myListItems", JSON.stringify(array));
-    inputText.value = "";
-    console.log(inputNameValue);
+    let inputNameValue = document.querySelector("#name").value;
+    let inputDescriptionValue = document.querySelector("#description").value;
+    let inputDateValue = document.querySelector("#date").value;
+    let newTask = {
+      name: inputNameValue,
+      description: inputDescriptionValue,
+      date: inputDateValue,
+    };
+    taskArray.push(newTask);
+    console.log(taskArray);
+    createContent();
   });
 }
-
