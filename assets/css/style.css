@@ -8,7 +8,9 @@ body .planner-main-title {
 body .planner-filter {
   width: 50%;
   margin: auto;
+  display: flex;
+  flex-direction: row;
 }
-body .planner-filter button {
-  width: 15%;
+body .planner-filter-order {
+  padding-left: 50px;
 }

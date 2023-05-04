@@ -8,8 +8,10 @@ body {
   .planner-filter {
     width: 50%;
     margin: auto;
-    button {
-      width: 15%;
+    display: flex;
+    flex-direction: row;
+    &-order {
+      padding-left: 50px;
     }
   }
 }
