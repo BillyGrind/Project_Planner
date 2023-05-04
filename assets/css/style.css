@@ -1,4 +1,14 @@
 @import url("normalize.css");
 body {
   background-color: lightblue;
-}/*# sourceMappingURL=style.css.map */
+}
+body .planner-main-title {
+  text-align: center;
+}
+body .planner-filter {
+  width: 50%;
+  margin: auto;
+}
+body .planner-filter button {
+  width: 15%;
+}

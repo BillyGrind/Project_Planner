@@ -1,4 +1,15 @@
 @import url("normalize.css");
-body{
-    background-color: lightblue;
+body {
+  background-color: lightblue;
+
+  .planner-main-title {
+    text-align: center;
+  }
+  .planner-filter {
+    width: 50%;
+    margin: auto;
+    button {
+      width: 15%;
+    }
+  }
 }
