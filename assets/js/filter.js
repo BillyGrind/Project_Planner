@@ -42,3 +42,8 @@ export function orderByName() {
 
   names.sort();
 }
+function orderByDates() {
+  const dates = document.getElementsByClassName("content-date");
+
+  dates.sort((date1, date2) => date1 - date2);
+}
