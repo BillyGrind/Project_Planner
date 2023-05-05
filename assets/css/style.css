@@ -2,6 +2,28 @@
 body {
   background-color: lightblue;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+form section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-button {
+  justify-content: center;
+  margin: 20px;
+}
+
+.planner-content-global {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}/*# sourceMappingURL=style.css.map */
 body .planner-main-title {
   text-align: center;
   padding: 50px 0px 30px 0px;
