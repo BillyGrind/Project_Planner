@@ -1,5 +1,5 @@
 import { getItemStorage } from "./getItemAndStore.js";
-import { daysLeft} from "./date.js";
+import { daysLeft } from "./date.js";
 
 export function createContent() {
   let plannerContent = document.querySelector(".planner-content");
@@ -15,7 +15,7 @@ export function createContent() {
     <section class="content-name">${name}</section>
     <section class="content-description">${description}</section>
     <section class="content-date">${date}</section>
-    <section class="content-status"><button class="button-status"></button></section>
+    <section class="content-status"><button class="button-status toDo">To Do</button></section>
   </div>
   `;
     plannerContent.innerHTML += content;
