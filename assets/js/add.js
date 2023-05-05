@@ -46,9 +46,7 @@ export function createAddContainer() {
       description: inputDescriptionValue,
       daysLeft: daysLeftValue,
     };
-    console.log(inputDateValue);
     taskArray.push(newTask);
-    console.log(taskArray);
     setItemStorage(taskArray);
     createContent();
     form.reset();
