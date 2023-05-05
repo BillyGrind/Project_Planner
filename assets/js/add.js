@@ -28,7 +28,7 @@ export function createAddContainer() {
   <section class="form-input">
     <input type="text" id="name" />
     <input type="text" id="description" />
-    <input type="text" id="date" />
+    <input type="date" id="date" />
   </section>
   <section class="form-button"><input type="submit" value="add" id="submit-button" /></section>
 </form>
@@ -46,9 +46,11 @@ export function createAddContainer() {
       description: inputDescriptionValue,
       date: inputDateValue,
     };
+    console.log(inputDateValue);
     taskArray.push(newTask);
     console.log(taskArray);
     setItemStorage(taskArray);
     createContent();
+    form.reset();
   });
 }

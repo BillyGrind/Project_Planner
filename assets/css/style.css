@@ -1,45 +1,112 @@
 @import url("normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap");
 body {
-  background-color: lightblue;
+  background-color: #ebf2fa;
+  font-family: "Noto Sans Display", sans-serif;
+  font-weight: 400;
+  color: #064789;
 }
 
-form {
+.planner-container {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
-form section {
+h1 {
+  font-family: "Lobster", cursive;
+  font-weight: 400;
+  font-size: 60px;
+  color: #064789;
+  margin: 30px auto;
+}
+
+.planner-filter {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  margin: 20px auto;
+  width: 700px;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button {
+  background-color: #427aa1;
+  color: #ebf2fa;
+  padding: 5px 10px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin: 0px 10px;
+}
+button:hover {
+  transform: scale(1.1);
+}
+button:active {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(2px);
+}
+
+.planner-add {
+  display: flex;
+  background-color: #427aa1;
+  color: #ebf2fa;
+  margin: 20px auto;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 .form-button {
+  display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 20px auto;
+}
+
+.planner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 700px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .planner-content-global {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}/*# sourceMappingURL=style.css.map */
-body .planner-main-title {
-  text-align: center;
-  padding: 50px 0px 30px 0px;
-  font-size: 26px;
-}
-body .planner-filter {
-  width: 50%;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
-}
-body .planner-filter button {
-  width: 50px;
-}
-body .planner-filter .planner-filter-order button {
-  width: 150px;
-  font-size: 17px;
-}
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-color: #427aa1;
+  color: #ebf2fa;
+  margin: 10px auto;
+  padding: 10px 0px;
+}/*# sourceMappingURL=style.css.map */

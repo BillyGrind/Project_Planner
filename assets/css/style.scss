@@ -1,47 +1,126 @@
+//Import Nomralize
 @import url("normalize.css");
-body {
-  background-color: lightblue;
-}
 
-//CSS Planner Add
-form {
+//Import Fonts
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Display&display=swap");
+//For Titles
+//font-family: 'Lobster', cursive;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap");
+// For lambda text
+//font-family: 'Noto Sans Display', sans-serif;
+
+//Colors
+$bleuFonce: #064789;
+$bleuMoyen: #427aa1;
+$bleuClair: #ebf2fa;
+$rouge: #fb3640;
+$vert: #a5be00;
+
+//Global CSS
+body {
+  background-color: $bleuClair;
+  font-family: "Noto Sans Display", sans-serif;
+  font-weight: 400;
+  color: #064789;
+}
+//Container Global
+.planner-container {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
-form section {
+//Main Title
+h1 {
+  font-family: "Lobster", cursive;
+  font-weight: 400;
+  font-size: 60px;
+  color: $bleuFonce;
+  margin: 30px auto;
+}
+// Buttons
+.planner-filter {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  margin: 20px auto;
+  width: 700px;
 }
-.form-button{
-    justify-content: center;
-    margin: 20px;
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
-// CSS Planner Content
-.planner-content-global {
+button {
+  background-color: $bleuMoyen;
+  color: $bleuClair;
+  padding: 5px 10px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin: 0px 10px;
+  // width: 75px;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    // background-color:#b5bd89;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+  }
+}
+//Function ADD
+.planner-add {
+  display: flex;
+  background-color: $bleuMoyen;
+  color: #ebf2fa;
+  margin: 20px auto;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+.form-label {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
 
-  .planner-main-title {
-    text-align: center;
-    padding: 50px 0px 30px 0px;
-    font-size: 26px;
-  }
-  .planner-filter {
-    width: 50%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    button {
-      width: 50px;
-    }
-    .planner-filter-order {
-      button {
-        width: 150px;
-        font-size: 17px;
-      }
-    }
-  }
+.form-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+//Display Task
+.planner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 700px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.planner-content-global {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-color:$bleuMoyen;
+  color: #ebf2fa;
+  margin: 10px auto;
+  padding: 10px 0px;
 }
