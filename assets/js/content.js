@@ -1,4 +1,3 @@
-import { taskArray } from "./const.js";
 import { getItemStorage } from "./getItemAndStore.js";
 
 export function createContent() {

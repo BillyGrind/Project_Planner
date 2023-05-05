@@ -1,6 +1,18 @@
-import { setItemStorage } from "./getItemAndStore.js";
-import { taskArray } from "./const.js";
+import { setItemStorage, getItemStorage } from "./getItemAndStore.js";
 import { createContent } from "./content.js";
+
+let taskArray = [];
+
+//Function to initialize taskArray with the value from local storage
+function initTaskArray() {
+  let storedTaskArray = getItemStorage();
+  if (storedTaskArray) {
+    taskArray = storedTaskArray;
+  }
+}
+
+// Call initTaskArray when the page loads
+window.addEventListener("load", initTaskArray);
 
 export function createAddContainer() {
   //Select planner container
@@ -23,7 +35,7 @@ export function createAddContainer() {
      `;
   plannerAddContainer.innerHTML += content;
   let form = document.querySelector("form");
-// function when you submit the form
+  // function when you submit the form
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     let inputNameValue = document.querySelector("#name").value;
