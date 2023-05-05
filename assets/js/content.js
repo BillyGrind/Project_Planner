@@ -1,11 +1,11 @@
 import { taskArray } from "./const.js";
-import { getItem } from "./getItemAndStore.js";
+import { getItemStorage } from "./getItemAndStore.js";
 
 export function createContent() {
   let plannerContent = document.querySelector(".planner-content");
   plannerContent.innerHTML = "";
-  let myArray = getItem();
-  console.log(myArray);
+  let myArray = getItemStorage();
+  // console.log(myArray);
   myArray.forEach((element) => {
     let name = element.name;
     let description = element.description;

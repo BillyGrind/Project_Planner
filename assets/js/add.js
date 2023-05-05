@@ -1,6 +1,7 @@
-import { setItem } from "./getItemAndStore.js";
+import { setItemStorage } from "./getItemAndStore.js";
 import { taskArray } from "./const.js";
 import { createContent } from "./content.js";
+
 export function createAddContainer() {
   //Select planner container
   let plannerAddContainer = document.querySelector(".planner-add");
@@ -22,7 +23,7 @@ export function createAddContainer() {
      `;
   plannerAddContainer.innerHTML += content;
   let form = document.querySelector("form");
-
+// function when you submit the form
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     let inputNameValue = document.querySelector("#name").value;
@@ -34,7 +35,8 @@ export function createAddContainer() {
       date: inputDateValue,
     };
     taskArray.push(newTask);
-    setItem(taskArray);
+    console.log(taskArray);
+    setItemStorage(taskArray);
     createContent();
   });
 }

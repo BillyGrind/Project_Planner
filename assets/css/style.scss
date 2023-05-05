@@ -1,8 +1,25 @@
 @import url("normalize.css");
-body{
-    background-color: lightblue;
+body {
+  background-color: lightblue;
 }
 
-.planner-content{
-    display: flex;
+//CSS Planner Add
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+form section {
+  display: flex;
+  justify-content: space-between;
+}
+.form-button{
+    justify-content: center;
+    margin: 20px;
+}
+// CSS Planner Content
+.planner-content-global {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }

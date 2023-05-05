@@ -3,6 +3,24 @@ body {
   background-color: lightblue;
 }
 
-.planner-content {
+form {
   display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+form section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-button {
+  justify-content: center;
+  margin: 20px;
+}
+
+.planner-content-global {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }/*# sourceMappingURL=style.css.map */
