@@ -35,13 +35,23 @@ export function filter() {
   });
 }
 const btnTime = document.getElementsByClassName("filter-date");
-const btnName = document.getElementsByClassName("filter-name");
+const btnName = document.getElementsByClassName("filter-name")[0];
 
-export function orderByName() {
-  const names = document.getElementsByClassName("content-name");
+/* const names = array.from(document.getElementsByClassName("content-name")); */
+const plannerContent = Array.from(
+  document.getElementsByClassName("planner-content")
+);
 
-  names.sort();
-}
+btnName.addEventListener("click", () => {
+  const names = Array.from(document.getElementsByClassName("content-name"));
+  names.sort((a, b) => a.textContent.localeCompare(b.textContent));
+  const plannerContent = document.getElementsByClassName("planner-content")[0];
+  plannerContent.innerHTML = "";
+  names.forEach((name) => {
+    plannerContent.appendChild(name.parentNode.cloneNode(true));
+  });
+});
+
 function orderByDates() {
   const dates = document.getElementsByClassName("content-date");
 
