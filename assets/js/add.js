@@ -15,6 +15,7 @@ function initTaskArray() {
 // Call initTaskArray when the page loads
 window.addEventListener("load", initTaskArray);
 
+// Write and Add content to localStorage
 export function createAddContainer() {
   //Select planner container
   let plannerAddContainer = document.querySelector(".planner-add");
@@ -45,6 +46,7 @@ export function createAddContainer() {
       name: inputNameValue,
       description: inputDescriptionValue,
       daysLeft: daysLeftValue,
+      status: "To Do",
     };
     taskArray.push(newTask);
     setItemStorage(taskArray);
