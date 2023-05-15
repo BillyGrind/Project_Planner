@@ -7,24 +7,26 @@ import { selectButton } from "./selectToggleButton.js";
 export function createContent() {
   let plannerContent = document.querySelector(".planner-content");
   plannerContent.innerHTML = "";
+  let id = 0;
   let myArray = getItemStorage();
   myArray.forEach((element) => {
     let name = element.name;
     let description = element.description;
     let daysLeft = element.daysLeft;
     let status = element.status;
-    let content = `<div class="planner-content-global">
+    let content = `<div class="planner-content-global" >
     <section class="content-index"></section>
     <section class="content-name">${name}</section>
     <section class="content-description">${description}</section>
     <section class="content-date">Nombre de jour(s) avant la deadline : <span>${daysLeft}</span></section>
     <section class="content-status">
-    <button class="button-status  ">${status}</button>
+    <button class="button-status toDo " id="${id}">${status}</button>
     <button class="button-delete">Delete</button>
     </section>
   </div>
   `;
     plannerContent.innerHTML += content;
+    id++
   });
     selectButton();
   // console.log(myArray);

@@ -42,6 +42,7 @@ export function createAddContainer() {
     let inputDescriptionValue = document.querySelector("#description").value;
     let inputDateValue = document.querySelector("#date").value;
     let daysLeftValue = daysLeft(new Date(inputDateValue));
+    array
     let newTask = {
       name: inputNameValue,
       description: inputDescriptionValue,
