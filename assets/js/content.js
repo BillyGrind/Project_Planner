@@ -23,3 +23,4 @@ export function createContent() {
     plannerContent.innerHTML += content;
   });
 }
+// deleteButton();

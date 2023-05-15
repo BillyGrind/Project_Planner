@@ -1,7 +1,7 @@
-let deleteButton = document.getElementsByClassName("delete-button");
 export function deleteButton() {
-  console.log(deleteButton);
-  for (let elem of deleteButton) {
+  let deleteButtonElements = document.getElementsByClassName("button-delete");
+  console.log(deleteButtonElements);
+  for (let elem of deleteButtonElements) {
     elem.addEventListener("click", () => {
       localStorage.removeItem("tasks");
       console.log("hello");
