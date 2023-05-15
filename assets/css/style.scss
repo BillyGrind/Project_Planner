@@ -1,47 +1,199 @@
+//Import Nomralize
 @import url("normalize.css");
-body {
-  background-color: lightblue;
-}
 
-//CSS Planner Add
+//Import Fonts
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Display&display=swap");
+//For Titles
+//font-family: 'Lobster', cursive;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap");
+// For lambda text
+//font-family: 'Noto Sans Display', sans-serif;
+
+//Colors
+$bleuFonce: #064789;
+$bleuMoyen: #427aa1;
+$bleuClair: #ebf2fa;
+$rouge: #fb3640;
+$vert: #a5be00;
+
+//Global CSS
+body {
+  background-color: $bleuClair;
+  font-family: "Noto Sans Display", sans-serif;
+  font-weight: 400;
+  color: #064789;
+}
+//Container Global
+.planner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+//Main Title
+h1 {
+  font-family: "Lobster", cursive;
+  font-weight: 400;
+  font-size: 55px;
+  color: $bleuFonce;
+  margin: 30px auto;
+}
+// Filter container Buttons
+.planner-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 375px;
+  margin: 20px auto;
+}
+.planner-filter-status {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.lanner-filter-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+button {
+  background-color: $bleuMoyen;
+  color: $bleuClair;
+  padding: 10px 15px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin: 0px 10px;
+  font-weight: bold;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    // background-color:#b5bd89;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+  }
+}
+//Form Container
+.planner-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $bleuMoyen;
+  color: #ebf2fa;
+  width: 325px;
+  margin: 20px auto;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
 form {
   display: flex;
   flex-direction: column;
-  margin: 20px;
-}
-form section {
-  display: flex;
-  justify-content: space-between;
-}
-.form-button{
-    justify-content: center;
-    margin: 20px;
-}
-// CSS Planner Content
-.planner-content-global {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-  .planner-main-title {
+  align-items: center;
+  label,
+  input {
+    margin: 5px auto;
+  }
+  input {
+    height: 30px;
+    width: 250px;
     text-align: center;
-    padding: 50px 0px 30px 0px;
-    font-size: 26px;
   }
-  .planner-filter {
-    width: 50%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    button {
-      width: 50px;
+}
+.form-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+//Display Task
+.planner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+}
+.planner-content-global {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 350px;
+  height: auto;
+  background-color: $bleuMoyen;
+  color: #ebf2fa;
+  margin: 10px auto;
+}
+// style du Name
+.content-name {
+  width: 320px;
+  height: 25px;
+  text-align: center;
+  background-color: #064789;
+  color: #ebf2fa;
+  padding: 15px;
+  border-radius: 10px 10px 0px 0px;
+  // margin: 20px auto 0px auto;
+}
+//style description
+.content-description {
+  height: auto;
+  text-align: center;
+  background-color: #427aa1;
+  margin: 10px auto 20px auto;
+  padding: 10px;
+  text-align: justify;
+}
+.content-status {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  button {
+    padding: 10px 15px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    margin: 0px 10px;
+    font-weight: bold;
+    &:hover {
+      transform: scale(1.1);
     }
-    .planner-filter-order {
-      button {
-        width: 150px;
-        font-size: 17px;
-      }
+    &:active {
+      // background-color:#b5bd89;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transform: translateY(2px);
     }
   }
 }
+.button-status{
+  background-color:$vert;
+  color: $bleuClair;
+}
+.button-delete {
+  background-color: $bleuClair;
+  color: #fb3640;
+}
+span {
+  background-color: $bleuClair;
+  color: #064789;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+// Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem distinctio odit necessitatibus nesciunt quam quis consequatur et velit odio eveniet! Mollitia reiciendis quidem autem ab esse eum, debitis commodi nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem distinctio odit necessitatibus nesciunt quam quis consequatur et velit odio eveniet! Mollitia reiciendis quidem autem ab esse eum, debitis commodi nam?
