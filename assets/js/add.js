@@ -1,5 +1,6 @@
 import { setItemStorage, getItemStorage } from "./getItemAndStore.js";
 import { createContent } from "./content.js";
+import { daysLeft } from "./date.js";
 
 let taskArray = [];
 
@@ -20,18 +21,16 @@ export function createAddContainer() {
   //Create input Name
   let content = `
   <form>
-  <section class="form-label">
     <label for="name">Name</label>
-    <label for="description">Description</label>
-    <label for="date">Date</label>
-  </section>
-  <section class="form-input">
     <input type="text" id="name" />
+    <label for="description">Description</label>
     <input type="text" id="description" />
+    <label for="date">Date</label>
     <input type="date" id="date" />
-  </section>
-  <section class="form-button"><input type="submit" value="add" id="submit-button" /></section>
-</form>
+    <section class="form-button">
+      <input type="submit" value="add" id="submit-button" />
+    </section>
+  </form>
      `;
   plannerAddContainer.innerHTML += content;
   let form = document.querySelector("form");
@@ -41,16 +40,29 @@ export function createAddContainer() {
     let inputNameValue = document.querySelector("#name").value;
     let inputDescriptionValue = document.querySelector("#description").value;
     let inputDateValue = document.querySelector("#date").value;
+    let daysLeftValue = daysLeft(new Date(inputDateValue));
     let newTask = {
       name: inputNameValue,
       description: inputDescriptionValue,
-      date: inputDateValue,
+      daysLeft: daysLeftValue,
     };
-    console.log(inputDateValue);
     taskArray.push(newTask);
-    console.log(taskArray);
     setItemStorage(taskArray);
     createContent();
     form.reset();
   });
 }
+
+//   <form>
+//   <section class="form-label">
+//     <label for="name">Name</label>
+//     <label for="description">Description</label>
+//     <label for="date">Date</label>
+//   </section>
+//   <section class="form-input">
+//     <input type="text" id="name" />
+//     <input type="text" id="description" />
+//     <input type="date" id="date" />
+//   </section>
+//   <section class="form-button"><input type="submit" value="add" id="submit-button" /></section>
+// </form>

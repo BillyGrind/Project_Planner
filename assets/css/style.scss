@@ -35,17 +35,27 @@ body {
 h1 {
   font-family: "Lobster", cursive;
   font-weight: 400;
-  font-size: 60px;
+  font-size: 55px;
   color: $bleuFonce;
   margin: 30px auto;
 }
-// Buttons
+// Filter container Buttons
 .planner-filter {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 375px;
   margin: 20px auto;
-  width: 700px;
+}
+.planner-filter-status {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.lanner-filter-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 button {
   margin: 0;
@@ -65,12 +75,11 @@ button {
 button {
   background-color: $bleuMoyen;
   color: $bleuClair;
-  padding: 5px 10px;
+  padding: 10px 15px;
   border-radius: 15px;
-  text-transform: uppercase;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   margin: 0px 10px;
-  // width: 75px;
+  font-weight: bold;
   &:hover {
     transform: scale(1.1);
   }
@@ -80,25 +89,33 @@ button {
     transform: translateY(2px);
   }
 }
-//Function ADD
+//Form Container
 .planner-add {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: $bleuMoyen;
   color: #ebf2fa;
+  width: 325px;
   margin: 20px auto;
   padding: 10px 10px;
   border-radius: 10px;
 }
-.form-label {
+form {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  margin: 20px auto;
-  text-transform: uppercase;
-  font-weight: bolder;
+  label,
+  input {
+    margin: 5px auto;
+  }
+  input {
+    height: 30px;
+    width: 250px;
+    text-align: center;
+  }
 }
-
 .form-button {
   display: flex;
   justify-content: center;
@@ -109,18 +126,74 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 700px;
-  padding: 10px;
-  border-radius: 5px;
+  width: 375px;
 }
 .planner-content-global {
+  border-radius: 10px;
   display: flex;
-  justify-content: space-between;
-  text-align: center;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 350px;
   height: auto;
-  background-color:$bleuMoyen;
+  background-color: $bleuMoyen;
   color: #ebf2fa;
   margin: 10px auto;
-  padding: 10px 0px;
 }
+// style du Name
+.content-name {
+  width: 320px;
+  height: 25px;
+  text-align: center;
+  background-color: #064789;
+  color: #ebf2fa;
+  padding: 15px;
+  border-radius: 10px 10px 0px 0px;
+  // margin: 20px auto 0px auto;
+}
+//style description
+.content-description {
+  height: auto;
+  text-align: center;
+  background-color: #427aa1;
+  margin: 10px auto 20px auto;
+  padding: 10px;
+  text-align: justify;
+}
+.content-status {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  button {
+    padding: 10px 15px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    margin: 0px 10px;
+    font-weight: bold;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      // background-color:#b5bd89;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transform: translateY(2px);
+    }
+  }
+}
+.button-status{
+  background-color:$vert;
+  color: $bleuClair;
+}
+.button-delete {
+  background-color: $bleuClair;
+  color: #fb3640;
+}
+span {
+  background-color: $bleuClair;
+  color: #064789;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+// Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem distinctio odit necessitatibus nesciunt quam quis consequatur et velit odio eveniet! Mollitia reiciendis quidem autem ab esse eum, debitis commodi nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem distinctio odit necessitatibus nesciunt quam quis consequatur et velit odio eveniet! Mollitia reiciendis quidem autem ab esse eum, debitis commodi nam?
