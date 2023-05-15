@@ -52,17 +52,3 @@ export function createAddContainer() {
     form.reset();
   });
 }
-
-//   <form>
-//   <section class="form-label">
-//     <label for="name">Name</label>
-//     <label for="description">Description</label>
-//     <label for="date">Date</label>
-//   </section>
-//   <section class="form-input">
-//     <input type="text" id="name" />
-//     <input type="text" id="description" />
-//     <input type="date" id="date" />
-//   </section>
-//   <section class="form-button"><input type="submit" value="add" id="submit-button" /></section>
-// </form>

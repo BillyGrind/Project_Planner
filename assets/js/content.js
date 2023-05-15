@@ -6,15 +6,15 @@ export function createContent() {
   let plannerContent = document.querySelector(".planner-content");
   plannerContent.innerHTML = "";
   let myArray = getItemStorage();
-  myArray.forEach((element) => {
-    let name = element.name;
-    let description = element.description;
-    let daysLeft = element.daysLeft;
-    let content = `<div class="planner-content-global">
+  if (myArray.length > 0) {
+    myArray.forEach((element) => {
+      let name = element.name;
+      let description = element.description;
+      let daysLeft = element.daysLeft;
+      let content = `<div class="planner-content-global">
     <section class="content-index"></section>
     <section class="content-name">${name}</section>
     <section class="content-description">${description}</section>
-    <section class="content-date">${date}</section>
     <section class="content-status"><button class="button-status toDo">To Do</button></section>
     <section class="content-date">Nombre de jour(s) avant la deadline : <span>${daysLeft}</span></section>
     <section class="content-status">
@@ -23,7 +23,7 @@ export function createContent() {
     </section>
   </div>
   `;
-    plannerContent.innerHTML += content;
-  });
+      plannerContent.innerHTML += content;
+    });
+  }
 }
-// deleteButton();

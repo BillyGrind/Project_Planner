@@ -5,6 +5,10 @@ export function setItemStorage(array) {
 
 export function getItemStorage() {
   let arrayJson = localStorage.getItem("tasks");
-  let array = JSON.parse(arrayJson);
-  return array;
+  if (arrayJson === null) {
+    return [];
+  } else {
+    let array = JSON.parse(arrayJson);
+    return array;
+  }
 }
