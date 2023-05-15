@@ -1,45 +1,189 @@
 @import url("normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap");
 body {
-  background-color: lightblue;
+  background-color: #ebf2fa;
+  font-family: "Noto Sans Display", sans-serif;
+  font-weight: 400;
+  color: #064789;
+}
+
+.planner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  font-weight: 400;
+  font-size: 55px;
+  color: #064789;
+  margin: 30px auto;
+}
+
+.planner-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 375px;
+  margin: 20px auto;
+}
+
+.planner-filter-status {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.lanner-filter-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button {
+  background-color: #427aa1;
+  color: #ebf2fa;
+  padding: 10px 15px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin: 0px 10px;
+  font-weight: bold;
+}
+button:hover {
+  transform: scale(1.1);
+}
+button:active {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(2px);
+}
+
+.planner-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #427aa1;
+  color: #ebf2fa;
+  width: 325px;
+  margin: 20px auto;
+  padding: 10px 10px;
+  border-radius: 10px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  align-items: center;
 }
-
-form section {
-  display: flex;
-  justify-content: space-between;
+form label,
+form input {
+  margin: 5px auto;
+}
+form input {
+  height: 30px;
+  width: 250px;
+  text-align: center;
 }
 
 .form-button {
+  display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 20px auto;
+}
+
+.planner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
 }
 
 .planner-content-global {
+  border-radius: 10px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}/*# sourceMappingURL=style.css.map */
-body .planner-main-title {
-  text-align: center;
-  padding: 50px 0px 30px 0px;
-  font-size: 26px;
-}
-body .planner-filter {
-  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: auto;
+  width: 350px;
+  height: auto;
+  background-color: #427aa1;
+  color: #ebf2fa;
+  margin: 10px auto;
+}
+
+.content-name {
+  width: 320px;
+  height: 25px;
+  text-align: center;
+  background-color: #064789;
+  color: #ebf2fa;
+  padding: 15px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.content-description {
+  height: auto;
+  text-align: center;
+  background-color: #427aa1;
+  margin: 10px auto 20px auto;
+  padding: 10px;
+  text-align: justify;
+}
+
+.content-status {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 30px;
 }
-body .planner-filter button {
-  width: 50px;
+.content-status button {
+  padding: 10px 15px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin: 0px 10px;
+  font-weight: bold;
 }
-body .planner-filter .planner-filter-order button {
-  width: 150px;
-  font-size: 17px;
+.content-status button:hover {
+  transform: scale(1.1);
 }
+.content-status button:active {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(2px);
+}
+
+.button-status {
+  background-color: #a5be00;
+  color: #ebf2fa;
+}
+
+.button-delete {
+  background-color: #ebf2fa;
+  color: #fb3640;
+}
+
+span {
+  background-color: #ebf2fa;
+  color: #064789;
+  padding: 5px;
+  border-radius: 10px;
+}/*# sourceMappingURL=style.css.map */
